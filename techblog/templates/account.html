@@ -1,6 +1,6 @@
 {% extends "base.html" %}
+{% block title %}{{current_user.username}} - Technopedia{% endblock %}
 {% block content %}
-
 <div class="jumbotron">
   <div align='center'>
     <h1 >Welcome to the page for {{current_user.username}}</h1>
@@ -12,22 +12,21 @@
   <form  method="POST" action = "" enctype="multipart/form-data">
     {{ form.hidden_tag() }}
     <div class="form-group">
-      {{ form.username.label(class="form-group") }}
-      {{form.username(class='form-control')  }}
-    </div
-    <div class="form-group">
-      {{ form.email.label(class="form-group") }}
-      {{form.email(class='form-control')  }}
+      {{ form.username.label(class="form-control-label") }}
+      {{ form.username(class="form-control") }}
     </div>
     <div class="form-group">
-      {{ form.picture.label(class="form-group") }}
-      {{ form.picture(class="form-control-file") }}
+      {{ form.email.label(class="form-control-label") }}
+      {{ form.email(class="form-control") }}
     </div>
     <div class="form-group">
-        {{ form.submit(class="btn btn-primary") }}
+      {{ form.picture.label(class="form-control-label") }}<br>
+      {{ form.picture(class="form-control btn") }}
+    </div>
+    <div class="form-group">
+        {{ form.submit(class="form-control btn btn-primary col-4") }}
     </div>
   </form>
-
 </div>
 
 {% endblock content %}

@@ -1,4 +1,11 @@
 {% extends "base.html" %}
+
+{% block title %}
+{% if form.title.data %} Update Post - Technopedia
+{% else %} Create Post - Technopedia
+{% endif %}
+{% endblock %}
+
 {% block content %}
 <div class="container">
   <form class="form-group" method="POST">
