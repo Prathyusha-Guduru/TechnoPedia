@@ -8,13 +8,10 @@ from flask_login import LoginManager
 app = Flask(__name__)
 
 #############################################################################
-############ CONFIGURATIONS (CAN BE SEPARATE CONFIG.PY FILE) ###############
+############ CONFIGURATIONS  ###############################################
 ###########################################################################
 
-# Remember you need to set your environment variables at the command line
-# when you deploy this to a real website.
-# export SECRET_KEY=mysecret
-# set SECRET_KEY=mysecret
+
 app.config['SECRET_KEY'] = 'mysecret'
 
 #################################
